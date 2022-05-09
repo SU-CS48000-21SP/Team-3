@@ -3,5 +3,5 @@
 
 - Ahmet Berk TAŞ
 - Doğkan Saraç
-- Mert Türe
+- Mert Ture
 - Mizbah Çelik
