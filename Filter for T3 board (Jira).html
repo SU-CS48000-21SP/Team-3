@@ -1,0 +1,1463 @@
+<html
+        xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Filter for T3 board (Jira)</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\,";
+    mso-displayed-thousand-separator:"\.";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="69">
+            <img src="https://courseflow.atlassian.net/images/icon-jira-software-logo.png" width="57" height="30" border="0" alt="Filter for T3 board (Jira)">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="69">
+            <a href="https://courseflow.atlassian.net/issues/?filter=10003">Filter for T3 board (Jira)</a>
+        </td>
+    </tr>
+    <tr>
+                <td colspan="69">
+            <strong>11</strong> konu gösteriliyor (<strong>09/Haz/22 3:53 PM</strong>).
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable" class="aui " border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-project" data-id="project">
+                                                        Proje
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                                                        Anahtar
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                                                        Özet
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                                                        Konu Türü
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                                                        Durum
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                                                        Öncelik
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                                                        Çözüm
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                                                        Atanan Kişi
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                                                        Raporlayan
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-creator" data-id="creator">
+                                                        Oluşturan
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                                                        Oluşturulan
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-lastViewed" data-id="lastViewed">
+                                                        Son Görüntüleme
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                                                        Güncellendi
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                                                        Çözülme Tarihi
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-versions" data-id="versions">
+                                                        Etkilenen sürümler
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-fixVersions" data-id="fixVersions">
+                                                        Düzeltme sürümleri
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-components" data-id="components">
+                                                        Bileşenler
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                                                        Bitiş tarihi
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-votes" data-id="votes">
+                                                        Oylar
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-watches" data-id="watches">
+                                                        Takip Edenler
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-thumbnail" data-id="thumbnail">
+                                                        Görseller
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate" data-id="timeoriginalestimate">
+                                                        Orijinal tahmin
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeestimate" data-id="timeestimate">
+                                                        Kalan Süre Tahmini
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timespent" data-id="timespent">
+                                                        Harcanan Süre
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-workratio" data-id="workratio">
+                                                        Çalışma Oranı
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-subtasks" data-id="subtasks">
+                                                        Alt görevler
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuelinks" data-id="issuelinks">
+                                                        Bağlanan Konular
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-environment" data-id="environment">
+                                                        Ortam
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                                                        Açıklama
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-security" data-id="security">
+                                                        Güvenlik Düzeyi
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-progress" data-id="progress">
+                                                        İlerleme
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregateprogress" data-id="aggregateprogress">
+                                                        Σ İlerleme
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent" data-id="aggregatetimespent">
+                                                        Σ Harcanan Süre
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeestimate" data-id="aggregatetimeestimate">
+                                                        Σ Kalan Süre Tahmini
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeoriginalestimate" data-id="aggregatetimeoriginalestimate">
+                                                        Σ Orijinal Tahmini
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-labels" data-id="labels">
+                                                        Etiketler
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statuscategorychangedate" data-id="statuscategorychangedate">
+                                                        Durum Kategorisi Değiştirildi
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statusCategory" data-id="statusCategory">
+                                                        Durum Kategorisi
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-parent" data-id="parent">
+                                                        Üst Öğe
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10009" data-id="customfield_10009">
+                                                        Actual end
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10008" data-id="customfield_10008">
+                                                        Actual start
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10033" data-id="customfield_10033">
+                                                        Affected services
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10003" data-id="customfield_10003">
+                                                        Approvers
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10007" data-id="customfield_10007">
+                                                        Change reason
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10006" data-id="customfield_10006">
+                                                        Change risk
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10005" data-id="customfield_10005">
+                                                        Change type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10013" data-id="customfield_10013">
+                                                        Epic Color
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10014" data-id="customfield_10014">
+                                                        Epic Link
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10011" data-id="customfield_10011">
+                                                        Epic Name
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10012" data-id="customfield_10012">
+                                                        Epic Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10021" data-id="customfield_10021">
+                                                        Flagged
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10004" data-id="customfield_10004">
+                                                        Impact
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10017" data-id="customfield_10017">
+                                                        Issue color
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10002" data-id="customfield_10002">
+                                                        Organizations
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10018" data-id="customfield_10018">
+                                                        Parent Link
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10019" data-id="customfield_10019">
+                                                        Rank
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10010" data-id="customfield_10010">
+                                                        Request Type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10032" data-id="customfield_10032">
+                                                        Request language
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10029" data-id="customfield_10029">
+                                                        Request participants
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10030" data-id="customfield_10030">
+                                                        Satisfaction
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10020" data-id="customfield_10020">
+                                                        Sprint
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10015" data-id="customfield_10015">
+                                                        Start date
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10028" data-id="customfield_10028">
+                                                        Story Points
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10016" data-id="customfield_10016">
+                                                        Story point estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10023" data-id="customfield_10023">
+                                                        Target end
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10022" data-id="customfield_10022">
+                                                        Target start
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10001" data-id="customfield_10001">
+                                                        Team
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10024" data-id="customfield_10024">
+                                                        [CHART] Date of First Response
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10000" data-id="customfield_10000">
+                                                        development
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10053" rel="10053" data-issuekey="T3-1" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-1" href="https://courseflow.atlassian.net/browse/T3-1">T3-1</a>
+</td>
+                                            <td class="summary"><p>
+                Collect data from GitHub and analyze it.
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Mert Ture
+    </td>
+                                            <td class="reporter">            Genco Cosgun
+    </td>
+                                            <td class="creator">            Genco Cosgun
+    </td>
+                                            <td class="created"> 31/Mar/22 5:14 PM </td>
+                                            <td class="lastViewed"> 09/Haz/22 3:53 PM </td>
+                                            <td class="updated"> 12/May/22 3:23 PM </td>
+                                            <td class="resolutiondate"> 05/Nis/22 12:22 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description"></td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 05/Nis/22 12:22 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000a0:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 1</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    8
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10054" rel="10054" data-issuekey="T3-2" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-2" href="https://courseflow.atlassian.net/browse/T3-2">T3-2</a>
+</td>
+                                            <td class="summary"><p>
+                Research Github issues datasets and analyze what people did
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Doğkan Saraç (Student)
+    </td>
+                                            <td class="reporter">            Genco Cosgun
+    </td>
+                                            <td class="creator">            Genco Cosgun
+    </td>
+                                            <td class="created"> 31/Mar/22 5:14 PM </td>
+                                            <td class="lastViewed"> 12/May/22 3:53 PM </td>
+                                            <td class="updated"> 12/May/22 3:23 PM </td>
+                                            <td class="resolutiondate"> 05/Nis/22 12:22 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">2</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description"></td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 05/Nis/22 12:22 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000a8:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 1</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    8
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024">            <span title="05/Nis/22 12:34 AM"><time class="livestamp allow-future" datetime="2022-04-05T00:34:17+0300">05/Nis/22 12:34 AM</time></span>
+    </td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10055" rel="10055" data-issuekey="T3-3" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-3" href="https://courseflow.atlassian.net/browse/T3-3">T3-3</a>
+</td>
+                                            <td class="summary"><p>
+                Duplicate detection with issues - literature research
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Mizbah Çelik
+    </td>
+                                            <td class="reporter">            Genco Cosgun
+    </td>
+                                            <td class="creator">            Genco Cosgun
+    </td>
+                                            <td class="created"> 31/Mar/22 5:15 PM </td>
+                                            <td class="lastViewed"> 10/May/22 12:37 AM </td>
+                                            <td class="updated"> 08/Nis/22 9:16 AM </td>
+                                            <td class="resolutiondate"> 08/Nis/22 1:49 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">2</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description"></td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 08/Nis/22 1:49 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000ag:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 1</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024">            <span title="05/Nis/22 12:01 AM"><time class="livestamp allow-future" datetime="2022-04-05T00:01:43+0300">05/Nis/22 12:01 AM</time></span>
+    </td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10057" rel="10057" data-issuekey="T3-5" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-5" href="https://courseflow.atlassian.net/browse/T3-5">T3-5</a>
+</td>
+                                            <td class="summary"><p>
+                As a developer, I would like to train Word2Vec model with bag of words and continuous skip gram
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Mert Ture
+    </td>
+                                            <td class="reporter">            Mert Ture
+    </td>
+                                            <td class="creator">            Mert Ture
+    </td>
+                                            <td class="created"> 10/May/22 12:38 AM </td>
+                                            <td class="lastViewed"> 12/May/22 6:12 PM </td>
+                                            <td class="updated"> 12/May/22 6:13 PM </td>
+                                            <td class="resolutiondate"> 12/May/22 6:13 PM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Train Word2Vec model with bag of words and continuous skip gram
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 12/May/22 6:13 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000ak:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 2</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    8
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000">    <div class="fusion-devsummary-cf"><div class="fusion-development"><a class="fusion-widget" data-dev-type="pullrequest" data-issue-id="10057"data-issue-key="T3-5"data-dev-summary="{&quot;cachedValue&quot;:{&quot;errors&quot;:[],&quot;summary&quot;:{&quot;pullrequest&quot;:{&quot;overall&quot;:{&quot;count&quot;:1,&quot;lastUpdated&quot;:&quot;2022-05-12T18:12:47.000+0300&quot;,&quot;stateCount&quot;:1,&quot;state&quot;:&quot;MERGED&quot;,&quot;dataType&quot;:&quot;pullrequest&quot;,&quot;open&quot;:false},&quot;byInstanceType&quot;:{&quot;GitHub&quot;:{&quot;count&quot;:1,&quot;name&quot;:&quot;GitHub&quot;}}}}},&quot;isStale&quot;:true}"><span class="aui-lozenge aui-lozenge-overflow aui-lozenge-subtle aui-lozenge-success fusion-widget-tooltip "data-tooltip="&lt;span class=&quot;count&quot;&gt;1&lt;/span&gt; çekme isteği">BİRLEŞTİRİLDİ</span></a></div></div>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10056" rel="10056" data-issuekey="T3-4" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-4" href="https://courseflow.atlassian.net/browse/T3-4">T3-4</a>
+</td>
+                                            <td class="summary"><p>
+                As a developer, I would like to implement TF IDF model with Cosine Similarity and Euclidean Distances for Duplicate Issue detection
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Mert Ture
+    </td>
+                                            <td class="reporter">            Mert Ture
+    </td>
+                                            <td class="creator">            Mert Ture
+    </td>
+                                            <td class="created"> 10/May/22 12:38 AM </td>
+                                            <td class="lastViewed"> 12/May/22 5:15 PM </td>
+                                            <td class="updated"> 12/May/22 3:57 PM </td>
+                                            <td class="resolutiondate"> 10/May/22 12:43 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Implement TF IDF model with Cosine Similarity and Euclidean Distances for Duplicate Issue detection
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 10/May/22 12:43 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000ao:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 2</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    8
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000">    <div class="fusion-devsummary-cf"><div class="fusion-development"><a class="fusion-widget" data-dev-type="pullrequest" data-issue-id="10056"data-issue-key="T3-4"data-dev-summary="{&quot;cachedValue&quot;:{&quot;errors&quot;:[],&quot;summary&quot;:{&quot;pullrequest&quot;:{&quot;overall&quot;:{&quot;count&quot;:1,&quot;lastUpdated&quot;:&quot;2022-05-12T14:34:49.000+0300&quot;,&quot;stateCount&quot;:1,&quot;state&quot;:&quot;MERGED&quot;,&quot;dataType&quot;:&quot;pullrequest&quot;,&quot;open&quot;:false},&quot;byInstanceType&quot;:{&quot;GitHub&quot;:{&quot;count&quot;:1,&quot;name&quot;:&quot;GitHub&quot;}}}}},&quot;isStale&quot;:true}"><span class="aui-lozenge aui-lozenge-overflow aui-lozenge-subtle aui-lozenge-success fusion-widget-tooltip "data-tooltip="&lt;span class=&quot;count&quot;&gt;1&lt;/span&gt; çekme isteği">BİRLEŞTİRİLDİ</span></a></div></div>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10060" rel="10060" data-issuekey="T3-8" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-8" href="https://courseflow.atlassian.net/browse/T3-8">T3-8</a>
+</td>
+                                            <td class="summary"><p>
+                As a developer, I would like to find semantic similarity between sentences, so that I can find duplicate issues.
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Mizbah Çelik
+    </td>
+                                            <td class="reporter">            Mizbah Çelik
+    </td>
+                                            <td class="creator">            Mizbah Çelik
+    </td>
+                                            <td class="created"> 12/May/22 8:39 PM </td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="updated"> 13/May/22 1:18 AM </td>
+                                            <td class="resolutiondate"> 13/May/22 1:18 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description"></td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 13/May/22 1:18 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000aq:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 2</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    5
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000">    <div class="fusion-devsummary-cf"><div class="fusion-development"><a class="fusion-widget" data-dev-type="pullrequest" data-issue-id="10060"data-issue-key="T3-8"data-dev-summary="{&quot;cachedValue&quot;:{&quot;errors&quot;:[],&quot;summary&quot;:{&quot;pullrequest&quot;:{&quot;overall&quot;:{&quot;count&quot;:1,&quot;lastUpdated&quot;:&quot;2022-05-13T01:13:32.000+0300&quot;,&quot;stateCount&quot;:1,&quot;state&quot;:&quot;MERGED&quot;,&quot;dataType&quot;:&quot;pullrequest&quot;,&quot;open&quot;:false},&quot;byInstanceType&quot;:{&quot;GitHub&quot;:{&quot;count&quot;:1,&quot;name&quot;:&quot;GitHub&quot;}}}}},&quot;isStale&quot;:true}"><span class="aui-lozenge aui-lozenge-overflow aui-lozenge-subtle aui-lozenge-success fusion-widget-tooltip "data-tooltip="&lt;span class=&quot;count&quot;&gt;1&lt;/span&gt; çekme isteği">BİRLEŞTİRİLDİ</span></a></div></div>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10059" rel="10059" data-issuekey="T3-7" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-7" href="https://courseflow.atlassian.net/browse/T3-7">T3-7</a>
+</td>
+                                            <td class="summary"><p>
+                As an AI developer, I should have tokenizer for BERT model training
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Mizbah Çelik
+    </td>
+                                            <td class="reporter">            Mert Ture
+    </td>
+                                            <td class="creator">            Mert Ture
+    </td>
+                                            <td class="created"> 10/May/22 12:41 AM </td>
+                                            <td class="lastViewed"> 12/May/22 11:38 PM </td>
+                                            <td class="updated"> 13/May/22 1:18 AM </td>
+                                            <td class="resolutiondate"> 13/May/22 1:18 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description"></td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 13/May/22 1:18 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000as:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 2</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    5
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10058" rel="10058" data-issuekey="T3-6" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-6" href="https://courseflow.atlassian.net/browse/T3-6">T3-6</a>
+</td>
+                                            <td class="summary"><p>
+                Train BERT model with tokenized data
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Mizbah Çelik
+    </td>
+                                            <td class="reporter">            Mert Ture
+    </td>
+                                            <td class="creator">            Mert Ture
+    </td>
+                                            <td class="created"> 10/May/22 12:40 AM </td>
+                                            <td class="lastViewed"> 12/May/22 11:38 PM </td>
+                                            <td class="updated"> 13/May/22 1:18 AM </td>
+                                            <td class="resolutiondate"> 13/May/22 1:18 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description"></td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 13/May/22 1:18 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000aw:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 2</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    8
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10061" rel="10061" data-issuekey="T3-9" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-9" href="https://courseflow.atlassian.net/browse/T3-9">T3-9</a>
+</td>
+                                            <td class="summary"><p>
+                N-1,3,5 Testing
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Ahmet Berk Tas (Student)
+    </td>
+                                            <td class="reporter">            Mert Ture
+    </td>
+                                            <td class="creator">            Mert Ture
+    </td>
+                                            <td class="created"> 26/May/22 2:26 PM </td>
+                                            <td class="lastViewed"> 02/Haz/22 5:10 PM </td>
+                                            <td class="updated"> 03/Haz/22 9:41 AM </td>
+                                            <td class="resolutiondate"> 03/Haz/22 9:41 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Testing to duplicate issue tracker model with N-1,3,5. For example, N-1 test will calculate the score for the true prediction in the first result. N-3 will calculate for first 3 and N-5 for first 5.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 03/Haz/22 9:41 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000b4:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 3</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    3
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10064" rel="10064" data-issuekey="T3-12" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-12" href="https://courseflow.atlassian.net/browse/T3-12">T3-12</a>
+</td>
+                                            <td class="summary"><p>
+                Precision, TP, TN, FP, FN Scores
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Mizbah Çelik
+    </td>
+                                            <td class="reporter">            Mert Ture
+    </td>
+                                            <td class="creator">            Mert Ture
+    </td>
+                                            <td class="created"> 26/May/22 2:27 PM </td>
+                                            <td class="lastViewed"> 02/Haz/22 5:10 PM </td>
+                                            <td class="updated"> 03/Haz/22 9:41 AM </td>
+                                            <td class="resolutiondate"> 03/Haz/22 9:41 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Testing models with test data and compare it with real duplicate issues ti find True Positive, True Negative, False Positive and False Negative Scores. 
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 03/Haz/22 9:41 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000bs:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 3</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    5
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10065" rel="10065" data-issuekey="T3-13" class="issuerow">
+                                            <td class="project">    CS48000-team3
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="T3-13" href="https://courseflow.atlassian.net/browse/T3-13">T3-13</a>
+</td>
+                                            <td class="summary"><p>
+                Prepare Term Project Presentation
+    </p>
+</td>
+                                            <td class="issuetype">    feature
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Tamam&lt;/span&gt;">Tamam</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    Tamamlandı
+</td>
+                                            <td class="assignee">            Mert Ture
+    </td>
+                                            <td class="reporter">            Mert Ture
+    </td>
+                                            <td class="creator">            Mert Ture
+    </td>
+                                            <td class="created"> 26/May/22 2:27 PM </td>
+                                            <td class="lastViewed"> 02/Haz/22 5:12 PM </td>
+                                            <td class="updated"> 03/Haz/22 9:41 AM </td>
+                                            <td class="resolutiondate"> 03/Haz/22 9:41 AM </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Preparing the Term Project Presentation for the Final Demo on June 3rd. Presentation should include all the process, pipeline and results for the whole term.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 03/Haz/22 9:41 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Tamamlandı</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000c0:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10030"><div class="sd-feedback-rating-column"><span>İzin yok</span></div></td>
+                                            <td class="customfield_10020">T3 Sprint 3</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028">    5
+</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+        </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="69"><font size="1">
+        Mert Ture tarafından Jira 1001.0.0-SNAPSHOT#100200-sha1:91993055c559c982d116d2021e4718fea6f8f509 kullanılarak şu saatte oluşturuldu: Thu Jun 09 12:53:40 UTC 2022.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
