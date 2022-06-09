@@ -66,10 +66,10 @@ Example data is below:
 
 | Model  | Result |
 | ------------- | ------------- |
-| TF-IDF  | Bad  |
-| Word2Vec  | Bad  |
-| BERT | Neutral |
-| Roberta Large | Good |
+| [TF-IDF](TFIDF_model.ipynb)  | Bad  |
+| [Word2Vec](word2vec_model.ipynb)  | Bad  |
+| [BERT](BERT_model_1.ipynb) | Neutral |
+| [Roberta Large](testing_semantic_sim_with_transformers.ipynb) | Good |
 
 Best performed model is Roberta Large because it checks the semantics of the sentences well.
 
