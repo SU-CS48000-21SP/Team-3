@@ -99,7 +99,7 @@ Input to model is:
 ```
 For this input, our demo output is below:
 
-<img src="./screenshots/roberta-demo.png" width="400">
+<img src="./screenshots/roberta-demo.png" width="800">
 
 
 
